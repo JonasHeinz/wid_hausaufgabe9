@@ -1,8 +1,13 @@
-import Typography from '@mui/material/Typography';
+import { VegaLite } from "react-vega";
+import spec from "./chart_spec.json";
+
 function App() {
-  <Typography variant="h1" gutterBottom>
-       Hello React +MUI!
-      </Typography>
+  return (
+    <div>
+      <h1>Vega-Lite Chart</h1>
+      <VegaLite spec={spec} />
+    </div>
+  );
 }
 
-export default App
+export default App;

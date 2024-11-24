@@ -1,0 +1,35 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json",
+    "config": {
+      "view": {
+        "continuousHeight": 300,
+        "continuousWidth": 300
+      }
+    },
+    "data": {
+      "url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/movies.json"
+    },
+    "encoding": {
+      "size": {
+        "aggregate": "count",
+        "type": "quantitative"
+      },
+      "x": {
+        "bin": {
+          "maxbins": 20
+        },
+        "field": "Rotten_Tomatoes_Rating",
+        "type": "quantitative"
+      },
+      "y": {
+        "bin": {
+          "maxbins": 20
+        },
+        "field": "IMDB_Rating",
+        "type": "quantitative"
+      }
+    },
+    "mark": {
+      "type": "circle"
+    }
+  }
